@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Header</title>
+        <style>
+          /* *{
+            display:none;
+        } */
+          .container {
+            /* background-color:red; */
+            border-bottom: 1px solid red;
+          }
+          .navbar li {
+            display: inline;
+            border-right: 2px solid red;
+          }
+
+          li {
+            margin-block-start: 0em;
+            margin-block-end: 0em;
+          }
+          .limitless {
+          }
+
+          .metronic {
+          }
+
+          .pipilika {
+          }
+
+          /* #navbar {
+            background-color: azure;
+        }
+           ul>li {
+            display: inline;
+            vertical-align: middle;
+        }
+        li>a {
+            text-decoration: none;
+        }*/
+          .pl-10 {
+            padding-left: 10%;
+          }
+          .pl-30 {
+            padding-left: 30%;
+          }
+          .pl-5 {
+            padding-left: 5%;
+          }
+          .pt-5 {
+            padding-top: 5%;
+          }
+          .navbar li {
+            vertical-align: middle;
+          }
+        </style>
+      </head>
+
+      <body>
+        <div class="container">
+          <ul class="navbar">
+            <li>
+              <img src="./pondit-logo.png" width="50px" alt="" />
+            </li>
+            <li class="pl-5 pipilika">Home</li>
+            <li class="pl-5 metronic">About Us</li>
+            <li class="pl-5 metronic pipilika">Contact Us</li>
+            <li class="pl-5 limitless">Sign In</li>
+            <li class="pl-5 limitless pipilika">Sign Up</li>
+          </ul>
+        </div>
+        <div id="container2"></div>
+        <button onclick="displayHeader()">Display Header</button>
+        <script>
+          function displayHeader() {
+            let ul = document.createElement("UL");
+            ul.setAttribute("class", "navbar");
+
+            let li = document.createElement("LI");
+            let txt = document.createTextNode("Home");
+            li.setAttribute("class", "pl-5");
+            li.appendChild(txt);
+            ul.appendChild(li);
+
+            let li1 = document.createElement("LI");
+            let txt1 = document.createTextNode("About Us");
+            li1.appendChild(txt1);
+            ul.appendChild(li1);
+
+            let li2 = document.createElement("LI");
+            let txt2 = document.createTextNode("Contact Us");
+            li2.appendChild(txt2);
+            ul.appendChild(li2);
+
+            let li3 = document.createElement("LI");
+            let txt3 = document.createTextNode("Sign In");
+            li3.appendChild(txt3);
+            ul.appendChild(li3);
+
+            let container2 = document.querySelector("#container2");
+            // container2.appendChild(ul);
+            container2.innerHTML = ul.outerHTML;
+            //document.querySelector();
+
+            console.log(ul.outerHTML);
+          }
+
+          function createLI() {}
+
+          function createText() {}
+        </script>
+      </body>
+    </html>
+  </body>
+</html>
